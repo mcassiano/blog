@@ -1,0 +1,30 @@
+{{ if ne .Site.Params.Footer.hideRSSAndEmail true }}
+{{ if and ( ne .Site.Params.RSS.enableRSS false ) .Site.Params.Author.email }}
+Subscribe via <a href="{{ "index.xml" | absURL }}">RSS</a> or just <a href="mailto:{{ .Site.Params.Author.email }}">say hello</a>.
+<br />
+{{ end }}
+{{ if and ( ne .Site.Params.RSS.enableRSS false ) (not .Site.Params.Author.email) }}
+Subscribe via <a href="{{ "index.xml" | absURL }}">RSS</a>.
+<br />
+{{ end }}
+{{ if and ( ne .Site.Params.RSS.enableRSS true ) .Site.Params.Author.email }}
+Say hello via <a href="mailto:{{ .Site.Params.Author.email }}">email</a>.
+<br />
+{{ end }}
+{{ end }}
+
+{{ if ne .Site.Params.Footer.hideCredits true }}
+{{ with .Site.Params.Footer.credits }}
+{{ . | markdownify }}
+{{ else }}
+Made with <a href="https://github.com/rokcso/hugo-bearneo/">Hugo Bear Neo</a>.
+{{ end }}
+<br />
+{{ end }}
+
+{{ if ne .Site.Params.Footer.hideCopyright true }}
+{{ .Site.Params.copyright }}
+{{ end }}
+{{ if ne .Site.Params.Footer.hideSitemap true }}
+🗺️ <a href="{{ "sitemap.xml" | absURL }}">Sitemap</a>.
+{{ end }}

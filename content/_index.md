@@ -2,6 +2,8 @@
 title = "Home"
 +++
 
-Welcome to my personal blog.
+I’m Matt Candido.
 
-This site uses the `hugo-bearneo` theme.
+This is my personal blog, where I write about practical experiments with AI agents, software, and tools that do real work.
+
+I care about making systems useful in the real world: clear constraints, repeatable workflows, and technology that holds up outside the demo.
