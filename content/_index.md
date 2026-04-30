@@ -2,8 +2,16 @@
 title = "Home"
 +++
 
-I’m Matt Candido.
+I’m Matheus Candido.
 
-This is my personal blog, where I write about practical experiments with AI agents, software, and tools that do real work.
+I’m a Staff Software Engineer working in a somewhat unusual generalist role: I build scalable distributed systems, Android apps, and, from time to time, a bit of iOS too.
 
-I care about making systems useful in the real world: clear constraints, repeatable workflows, and technology that holds up outside the demo.
+I’ll probably write here about:
+
+- 🤖 tech and applying AI
+- 🍜 food
+- ✈️ travel
+- 🧭 leadership
+- 📝 experiences that feel worth keeping
+
+This isn’t a professional blog. It’s a place to think in public, document experiments, and keep track of things I found interesting enough to come back to.
