@@ -1,5 +1,5 @@
 +++
-title = "I Asked Hermes to Set Up This Blog"
+title = "How I Used Hermes to Set Up This Blog"
 slug = "setting-up-hugo-blog-with-docker-and-bearneo"
 date = 2026-04-30T03:12:27Z
 draft = false
@@ -7,9 +7,9 @@ tags = ["hugo", "docker", "blogging", "ai", "hermes"]
 +++
 
 This blog started as an experiment in delegation.
-I wanted to see how far Hermes could get from a short sequence of real messages, without me turning the whole thing into a project plan.
+I wanted to see how far Hermes could get from a short sequence of real messages, without turning the whole thing into a project plan.
 
-I started with a simple request:
+I began with a simple request:
 
 > “can you help me setup a Hugo blog? I want it setup with https://github.com/rokcso/hugo-bearneo/ theme”
 
@@ -23,7 +23,7 @@ I first asked whether Hermes had enough GitHub access to create the repo for me.
 It checked, found that the token could authenticate but did not have the permissions needed to create a repository, and reported that back.
 So I changed course and told it to work locally instead.
 
-That part matters because it shows the shape of the workflow.
+That mattered because it showed the shape of the workflow.
 I did not need Hermes to pretend constraints were not there.
 I needed it to check, adapt, and keep going.
 
@@ -36,10 +36,8 @@ Now the job was not just to scaffold a blog.
 It was to make the blog runnable in the environment we actually had.
 There was no local Hugo binary, so Docker became the practical path to a working preview.
 
-That is a good example of what I mean when I say the interesting part is not the code.
-The interesting part is the reasoning around the messages.
-A short instruction can still carry a lot:
-use this toolchain, in this environment, in a reproducible way, and get to a result I can actually verify.
+That is the part I found most interesting: not the code itself, but the reasoning around the messages.
+A short instruction can carry a lot of weight when it names the toolchain, the environment, and what counts as a usable result.
 
 Later, I added another real constraint:
 
@@ -74,7 +72,7 @@ I ask it things.
 It does the work.
 And when the work seems repeatable, it documents the pattern for next time.
 
-At one point I had to correct the framing directly, because that is the part I actually wanted the post to preserve:
+At one point I had to correct the framing directly, because that was the part I actually wanted the post to preserve:
 
 > “My angle is: I set you up. I ask you things. You do. Cite specific messages… etc. code is not important. Your reasoning around the messages I sent you is.”
 
