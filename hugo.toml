@@ -1,6 +1,6 @@
 baseURL = "http://192.168.1.220:1313/"
 languageCode = "en-us"
-title = "Personal Blog"
+title = "Matheus C."
 theme = "hugo-bearneo"
 enableRobotsTXT = true
 paginate = 10

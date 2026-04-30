@@ -1,4 +1,4 @@
-# Personal Blog
+# Matheus C.
 
 Hugo blog scaffolded with the [`hugo-bearneo`](https://github.com/rokcso/hugo-bearneo/) theme.
 
