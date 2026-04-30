@@ -7,7 +7,9 @@ tags = ["hugo", "docker", "blogging", "ai", "hermes"]
 +++
 
 This blog started as an experiment in delegation.
-I wanted to see how far Hermes could get from a short sequence of real messages, without turning the whole thing into a project plan.
+I was curious how much Hermes could actually do from a small set of messages — not just the obvious task, but the kind of work around it that makes the result feel surprisingly complete.
+
+![Hermes generated the screenshots, sent them over Telegram, and figured out how to force dark mode.](light-dark-blog-preview.jpg)
 
 I began with a simple request:
 
