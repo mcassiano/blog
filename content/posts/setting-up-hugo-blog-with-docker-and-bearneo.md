@@ -10,9 +10,11 @@ I wanted to get a personal blog online without turning the setup into a weekend 
 The result was a small Hugo site, the `hugo-bearneo` theme, and a Docker-based workflow
 so I can preview the site without installing Hugo globally.
 
-This post was also built as a collaboration: I talked to Hermes over Telegram, described
-the blog I wanted, and Hermes handled the scaffolding, Docker setup, content draft,
-and verification inside its own Docker-based environment.
+I talked to Hermes over Telegram, described the blog I wanted, and Hermes handled the
+scaffolding, Docker setup, content draft, and verification inside its own Docker-based
+environment.
+
+That’s the actual story: I asked, Hermes delivered.
 
 ## Why this stack?
 
