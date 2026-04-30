@@ -1,0 +1,15 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Personal Blog"
+theme = "hugo-bearneo"
+enableRobotsTXT = true
+paginate = 10
+
+[params]
+  description = "Notes, essays, and experiments."
+  toc = true
+  imageZoom = true
+  groupByYear = true
+  postSearch = true
+  followFeedId = ""
+  followUserId = ""
