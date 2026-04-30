@@ -5,6 +5,9 @@ theme = "hugo-bearneo"
 enableRobotsTXT = true
 paginate = 10
 
+[permalinks]
+  posts = "/p/:slug"
+
 [params]
   description = "Notes, essays, and experiments."
   toc = true
