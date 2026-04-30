@@ -6,8 +6,8 @@ draft = false
 tags = ["hugo", "docker", "blogging", "ai", "hermes"]
 +++
 
-This blog started as an experiment in delegation.
-I was curious how much Hermes could actually do from a small set of messages — not just the obvious task, but the kind of work around it that makes the result feel surprisingly complete.
+This blog started as an experiment in delegation, using [Hermes](https://hermes-agent.nousresearch.com/docs/) — an open-source AI agent from Nous Research — to see how far a small set of messages could go.
+What interested me most was not just whether it could finish the task, but how it handled the work around it: the constraints, the setup, and the reusable pattern it left behind.
 
 ![Hermes generated the screenshots, sent them over Telegram, and figured out how to force dark mode.](light-dark-blog-preview.jpg)
 
