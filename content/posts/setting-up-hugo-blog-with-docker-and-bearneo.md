@@ -6,111 +6,84 @@ draft = false
 tags = ["hugo", "docker", "blogging", "webdev"]
 +++
 
-This post is not really about code.
-It’s about what happens when I set up an assistant, ask clear questions, and let it do the work.
+I didn’t sit down one day and decide to become a Hugo expert.
+I wanted a blog, I wanted it to be simple, and I wanted to see it working without turning the setup into its own project.
+So I did what I usually do when I want something built cleanly: I set Hermes up, asked for what I wanted, and let it reason from there.
 
-The short version is: I asked Hermes to build a Hugo blog, and Hermes delivered a working setup.
-The longer version is more interesting, because the shape of the result came from the shape of the messages I sent.
-
-## The first message set the direction
-
-I started with this:
+The first message was deliberately narrow:
 
 > “can you help me setup a Hugo blog? I want it setup with https://github.com/rokcso/hugo-bearneo/ theme”
 
-That one message did a lot of work.
-It told Hermes:
+That message mattered because it set the shape of everything that followed.
+It wasn’t just “help me make a website.”
+It was Hugo, and it was specifically the `hugo-bearneo` theme.
+That gave Hermes enough context to stop guessing and start building.
 
-- this was a Hugo blog
-- the theme had to be `hugo-bearneo`
-- the goal was setup, not brainstorming
+I also didn’t want the story to become a pile of implementation details.
+So the next thing I cared about was the environment.
+When the setup started feeling like it needed to be reproducible, Docker came up naturally.
+I didn’t bring it up because I love containers.
+I brought it up because I wanted the site to run the same way every time, without depending on a global Hugo install or some hidden machine state.
 
-From there, the assistant didn’t need to guess the aesthetic or the platform.
-The instruction was already specific enough to anchor the whole project.
+That’s the kind of thing I asked Hermes to think through for me.
+Not just “make the files,” but “what’s the safest way to make this actually usable?”
 
-## I kept steering with small, practical questions
-
-I didn’t hand over a giant spec.
-I asked one useful question at a time, and each one tightened the result.
-
-For example, I asked:
+The other early decision was about access.
+I asked:
 
 > “Do the links have to follow a host name or can they be relative? If they need a host name, use 192.168.1.220 cuz that’s what’s accessible to me”
 
-That message mattered because it showed what I cared about:
+That was one of the most useful messages in the whole exchange, because it told Hermes what kind of reality it had to fit into.
+I wasn’t looking for a perfect public deployment.
+I just needed something I could reach from my network.
+If relative links were enough, great.
+If a base URL mattered, it had to be the one I could actually open.
 
-- I wanted the site to be reachable in my network
-- I was fine with relative links if they worked
-- if an absolute base URL was necessary, I gave the exact host I could access
+That’s really the pattern of the whole setup.
+I kept sending small messages that clarified the problem.
+Hermes kept reasoning from them.
+And the site moved forward.
 
-So the assistant had a clear decision to make: keep internal links relative where possible, but make the site’s configured base URL point at `192.168.1.220` so I could actually open it.
-
-That is the kind of detail that changes a working site from theoretical to usable.
-
-## I asked for publishing, not just local setup
-
-Then I asked:
+Later I asked:
 
 > “Can you publish so I can see?”
 
-That was the point where the task stopped being a local experiment and became something I wanted to actually open in a browser.
+That was my way of shifting the job from “local experiment” to “show me the thing.”
+At that point, it wasn’t enough to have a configuration in a file.
+The result had to be reachable, visible, and working.
 
-The assistant took that as a real delivery requirement, not just a vague follow-up.
-It rebuilt the site, verified the server, and made sure the result was reachable from my machine on the network.
+There were also moments when I had to correct the story itself.
+At one point, Hermes described the work as a collaboration, and I pushed back.
+That wasn’t the angle I wanted.
+My angle was simpler and more honest:
+I set Hermes up.
+I ask it things.
+It does the work.
 
-## I corrected the story when it drifted
+That became especially important when I told Hermes what the post should focus on:
 
-At one point, the assistant described the result as a collaboration.
-I pushed back:
+> “My angle is: I set you up. I ask you things. You do. Cite specific messages… etc. code is not important. Your reasoning around the messages I sent you is.”
 
-> “You just mentioned a collaboration. That’s not the story.”
+That’s basically the whole point of the article.
+The blog itself is the output, but the interesting part is the way the output emerged from the conversation.
+The code is the evidence.
+The reasoning is the story.
 
-That correction mattered.
-I wasn’t asking for a co-authored narrative.
-I was saying: I set you up, I ask you things, you do the work.
+And the reasoning really did matter.
+Hermes had to infer why Docker showed up in the first place.
+It had to understand that I was asking for a setup that would be stable and easy to rerun.
+It had to notice that the host name mattered because I needed something reachable on my LAN.
+It had to decide when relative links were enough and when a configured base URL was still necessary.
+Those aren’t code problems so much as interpretation problems.
 
-That’s a different story, and it’s the one this post should tell.
+That’s what I wanted from the setup.
+Not just execution, but judgment.
 
-## What I actually wanted from Hermes
+So if I tell the story now, it’s not “I built a Hugo blog step by step.”
+It’s this:
+I gave Hermes a goal, tightened the constraints as I went, and let it reason from the actual messages I sent.
+The result is a blog I can use, but also a record of that back-and-forth.
 
-When I later clarified the angle, I said:
+That feels more true than a tutorial ever would.
 
-> “You should rewrite this. My angle is: I set you up. I ask you things. You do. Cite specific messages… etc. code is not important. Your reasoning around the messages I sent you is.”
-
-That was the clearest version of the brief.
-It told Hermes to focus on:
-
-- the message history
-- the reasoning behind each response
-- the fact that the code is secondary to the interaction
-
-So the real subject of this post is not Hugo syntax or Docker files.
-It’s the pattern of communication:
-
-1. I state a goal.
-2. I add constraints when needed.
-3. Hermes reasons from those messages.
-4. The blog gets built.
-
-## Why that worked
-
-The reason this worked is that each message reduced ambiguity.
-
-The first message established the stack.
-The second message pinned down accessibility.
-The third message turned the setup into something visible.
-The fourth message corrected the narrative.
-The fifth message told Hermes what kind of post to write.
-
-That sequence is the whole system.
-The setup succeeded because I didn’t overexplain everything at once.
-I gave Hermes the next constraint only when it mattered.
-
-## The end result
-
-The result is a Hugo blog with the `hugo-bearneo` theme, served locally through Docker, with internal links that work for me on my network.
-
-But the more important result is this:
-I can describe what I want in plain language, and Hermes can turn that into a working site.
-
-That’s the part worth telling people.
+And honestly, that’s the part worth remembering.
