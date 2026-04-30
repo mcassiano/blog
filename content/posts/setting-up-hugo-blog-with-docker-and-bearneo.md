@@ -6,7 +6,7 @@ draft = false
 tags = ["hugo", "docker", "blogging", "webdev"]
 +++
 
-I didn’t sit down one day and decide to become a Hugo expert.
+I’ve been experimenting with Hermes for a few days now, and this blog is one of the things I asked it to build.
 I wanted a blog, I wanted it to be simple, and I wanted to see it working without turning the setup into its own project.
 So I set Hermes up, asked for what I wanted, and let it reason from there.
 
