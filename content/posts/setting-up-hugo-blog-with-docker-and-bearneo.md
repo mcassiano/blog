@@ -21,7 +21,8 @@ That gave Hermes enough context to stop guessing and start building.
 
 I also didn’t want the story to become a pile of implementation details.
 So the next thing I cared about was the environment.
-When the setup started feeling like it needed to be reproducible, Docker came up naturally.
+You explicitly asked me to run Hugo through Docker, and that turned into the cleanest way to make the site reproducible.
+It also fit the reality of the machine I was working in: Hugo wasn’t installed locally, so Docker was the practical route for a working preview loop.
 I didn’t bring it up because I love containers.
 I brought it up because I wanted the site to run the same way every time, without depending on a global Hugo install or some hidden machine state.
 
