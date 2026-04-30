@@ -23,6 +23,17 @@ If the theme submodule is not present after cloning:
 git submodule update --init --recursive
 ```
 
+## Run with Docker
+
+If you don't want to install Hugo locally, use Docker Compose:
+
+```bash
+sudo docker compose up -d --build
+sudo docker compose logs -f
+```
+
+The site will be available at http://localhost:1313/.
+
 ## Next steps
 
 - Replace the sample content with your own pages/posts
