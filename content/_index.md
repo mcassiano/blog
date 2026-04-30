@@ -4,7 +4,7 @@ title = "Home"
 
 I’m Matheus Candido.
 
-I’m a Staff Software Engineer working in a somewhat unusual generalist role: I build scalable distributed systems, Android apps, and, from time to time, a bit of iOS too.
+I’m a Staff Software Engineer at Uber, working in a somewhat unusual generalist role: I build scalable distributed systems, Android apps, and, from time to time, a bit of iOS too.
 
 I’ll probably write here about:
 
