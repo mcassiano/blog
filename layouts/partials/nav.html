@@ -1,0 +1,5 @@
+<a href="{{ "" | relURL }}">Home</a>
+<a href="{{ "/posts/" | relURL }}">Posts</a>
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
