@@ -10,6 +10,10 @@ I wanted to get a personal blog online without turning the setup into a weekend 
 The result was a small Hugo site, the `hugo-bearneo` theme, and a Docker-based workflow
 so I can preview the site without installing Hugo globally.
 
+This post was also built as a collaboration: I talked to Hermes over Telegram, described
+the blog I wanted, and Hermes handled the scaffolding, Docker setup, content draft,
+and verification inside its own Docker-based environment.
+
 ## Why this stack?
 
 I like a blog stack that stays out of the way:
@@ -21,6 +25,24 @@ I like a blog stack that stays out of the way:
 
 The goal was simple: create a site that feels lightweight, but still gives me a nice
 foundation for posts, pages, and later tweaks.
+
+## How this was actually built
+
+The instructions I gave were pretty direct:
+
+- set up a Hugo blog
+- use the `hugo-bearneo` theme
+- run Hugo through Docker
+- keep the workflow local and simple
+- write a post explaining the setup itself
+
+I sent those instructions in a Telegram DM to Hermes. Hermes was running in a Dockerized
+environment, so all of the repo work, template changes, and build checks happened there.
+That means this is less of a "I manually clicked everything" story and more of a
+"I described the goal and the assistant delivered the implementation" story.
+
+The nice part is that the result is still reproducible: the repo, theme, config, and
+Docker workflow are all checked in, so anyone can run the same site locally.
 
 ## The basic setup
 
